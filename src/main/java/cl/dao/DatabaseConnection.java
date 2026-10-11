@@ -4,6 +4,10 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
+/**
+ * Punto de conexión con base de datos MySQL a traves de JBDC.
+ * Implementa patron Singleton para reutilizar la instancia de conexión.
+ */
 public class DatabaseConnection {
 
 	private static final String URL = "jdbc:mysql://localhost:3306/biblioteca";
