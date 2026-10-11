@@ -12,7 +12,7 @@ import java.util.List;
 public class LibroDAO {
 
 	public boolean guardar(Libro libro) throws SQLException {
-		String sql = "INSERT INTO libros (titulo,autor,isbn, editorial, stock, id_categoria) VALUES (?,?,?,?,?,?)";
+		String sql = "INSERT INTO libros (titulo,autor,isbn, editorial, stock, id_categoria) VALUES (?,?,?,?,?,?,?)";
 		Connection conexion = DatabaseConnection.getInstance().getConnection();
 		try (PreparedStatement ps = conexion.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS)) {
 			ps.setString(1, libro.getTitulo());
